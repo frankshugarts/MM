@@ -18,6 +18,126 @@
   visibility: hidden;
 }</style>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frankshugarts/fulllightbox/demo/css/style2.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/frankshugarts/fulllightbox/dist/css/glightbox.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/frankshugarts/fulllightbox/demo/js/valde.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/frankshugarts/fullLightbox/dist/js/glightbox.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/frankshugarts/fulllightbox/demo/js/site.js"></script>
+        <script>
+            var lightbox = GLightbox();
+            lightbox.on('open', (target) => {
+                console.log('lightbox opened');
+            });
+            var lightboxDescription = GLightbox({
+                selector: '.glightbox2'
+            });
+            var lightboxVideo = GLightbox({
+                selector: '.glightbox3'
+            });
+            lightboxVideo.on('slide_changed', ({ prev, current }) => {
+                console.log('Prev slide', prev);
+                console.log('Current slide', current);
+
+                const { slideIndex, slideNode, slideConfig, player } = current;
+
+                if (player) {
+                    if (!player.ready) {
+                        // If player is not ready
+                        player.on('ready', (event) => {
+                            // Do something when video is ready
+                        });
+                    }
+
+                    player.on('play', (event) => {
+                        console.log('Started play');
+                    });
+
+                    player.on('volumechange', (event) => {
+                        console.log('Volume change');
+                    });
+
+                    player.on('ended', (event) => {
+                        console.log('Video ended');
+                    });
+                }
+            });
+
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                height: '800px',
+                width: '1000px',
+                 selector: '.glightbox4'
+            });
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                 selector: '.glightbox45'
+            });
+
+            /* var exampleApi = GLightbox({ selector: null });
+            exampleApi.insertSlide({
+                href: 'https://picsum.photos/1200/800',
+            });
+            exampleApi.insertSlide({
+                width: '500px',
+                content: '<p>Example</p>'
+            });
+            exampleApi.insertSlide({
+                href: 'https://www.youtube.com/watch?v=WzqrwPhXmew',
+            });
+            exampleApi.insertSlide({
+                width: '200vw',
+                content: document.getElementById('inline-example')
+            });
+            exampleApi.open(); */
+        </script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </head>
 
 <body>
