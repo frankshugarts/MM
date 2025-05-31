@@ -14,9 +14,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
   <!-- MDB -->
   <link rel="stylesheet" href="https://raw.githubusercontent.com/frankshugarts/MM/refs/heads/main/css/bootstrap-mega-menu.min.css" />
-  .div1{width:200px;background:#ddd;height:200px;display:inline-block}
-.div2{width:200px;background:red;height:200px;display:inline-block}
-.gap{width:200px;background:none;height:200px;display:inline-block;}
 </head>
 
 <body>
@@ -50,9 +47,11 @@
         style="padding-left: 0.15rem"
       >
                 <li class="nav-item">
-          <a class="nav-link" href="#"><font color="white">Head Start/Cap Intranet</font></a>
+          <a class="nav-link" href="#"><font color="red">Head Start/Cap Intranet</font></a>
         </li>
-        <li><div class='div1'></div><div class='gap'></div><div class='div2'></div></li>
+        li {  
+    padding-bottom: 16px;
+}</li>
         <li class="nav-item dropdown position-static">
           <a
             class="nav-link dropdown-toggle"
