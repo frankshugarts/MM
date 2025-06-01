@@ -1067,4 +1067,135 @@
 
 
 </body>
+
+<!-- From Feshdesk footer -->
+        <script>
+            var lightbox = GLightbox();
+            lightbox.on('open', (target) => {
+                console.log('lightbox opened');
+            });
+            var lightboxDescription = GLightbox({
+                height: '800px',
+                width: '1300px',
+
+              selector: '.glightbox1'
+            });
+            var lightboxVideo = GLightbox({
+                height: '800px',
+                width: '1100px',
+
+              selector: '.glightbox2'
+            });
+            lightboxVideo.on('slide_changed', ({ prev, current }) => {
+                console.log('Prev slide', prev);
+                console.log('Current slide', current);
+
+                const { slideIndex, slideNode, slideConfig, player } = current;
+
+                if (player) {
+                    if (!player.ready) {
+                        // If player is not ready
+                        player.on('ready', (event) => {
+                            // Do something when video is ready
+                        });
+                    }
+
+                    player.on('play', (event) => {
+                        console.log('Started play');
+                    });
+
+                    player.on('volumechange', (event) => {
+                        console.log('Volume change');
+                    });
+
+                    player.on('ended', (event) => {
+                        console.log('Video ended');
+                    });
+                }
+            });
+
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                height: '520px',
+                width: '700px',
+                 selector: '.glightbox3'
+            });
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                height: '800px',
+                width: '1200px',
+                 selector: '.glightbox4'
+            });
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                height: '400px',
+                width: '600px',
+                 selector: '.glightbox5'
+            });
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                height: '800px',
+                width: '1000px',
+                 selector: '.glightbox6'
+            });
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                height: '400px',
+                width: '600px',
+                 selector: '.glightbox10'
+            });
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                height: '400px',
+                width: '600px',
+                 selector: '.glightbox11'
+            });
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                height: '800px',
+                width: '1200px',
+                 selector: '.glightbox12'
+               });
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                height: '800px',
+                width: '1200px',
+                 selector: '.glightbox13'
+               });
+            var lightboxInlineIframe = GLightbox({
+                closeOnOutsideClick: false,
+                height: '460px',
+                width: '600px',
+                 selector: '.glightbox14'
+            });
+
+            /* var exampleApi = GLightbox({ selector: null });
+            exampleApi.insertSlide({
+                href: 'https://picsum.photos/1200/800',
+            });
+            exampleApi.insertSlide({
+                width: '500px',
+                content: '<p>Example</p>'
+            });
+            exampleApi.insertSlide({
+                href: 'https://www.youtube.com/watch?v=WzqrwPhXmew',
+            });
+            exampleApi.insertSlide({
+                width: '200vw',
+                content: document.getElementById('inline-example')
+            });
+            exampleApi.open(); */
+        </script>
+
+{% endif %}
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+
+
+
+
+
+
+  
 </html>
