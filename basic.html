@@ -56,7 +56,7 @@
             data-mdb-toggle="dropdown"
             aria-expanded="false"
           >
-            Mega menus
+            Mega menu
           </a>
           <!-- Dropdown menu -->
           <div
@@ -528,6 +528,18 @@
   <script type="text/javascript" src="https://raw.githubusercontent.com/frankshugarts/MM/refs/heads/main/js/mdb.min.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript"></script>
+
+
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+
+
+
+
+
+  
 </body>
 
 </html>
